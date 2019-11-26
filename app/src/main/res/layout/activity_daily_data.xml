@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+   >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tab_add_daily_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="25dp"
+        >
+
+
+        <!--        date-->
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="60dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginRight="40dp"
+            android:layout_marginStart="160dp"
+            app:srcCompat="@drawable/ibytes"
+            android:layout_marginLeft="150dp" />
+
+        <ImageView
+            android:id="@+id/date2"
+            android:layout_width="49dp"
+            android:layout_height="33dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:srcCompat="@drawable/date"
+            app:layout_constraintTop_toBottomOf="@id/logo"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="83dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="28dp"
+            android:gravity="center|start"
+            android:text="Date"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/date2"
+            app:layout_constraintTop_toBottomOf="@id/logo" />
+
+        <EditText
+            android:id="@+id/date1"
+            android:layout_width="164dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:hint="Date"
+            android:inputType="textPersonName|number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/date"
+            app:layout_constraintTop_toBottomOf="@id/logo"  />
+
+        <!--date-->
+        <!--medicine-->
+
+        <ImageView
+            android:id="@+id/scale_drawing"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date2"
+            app:srcCompat="@drawable/scale" />
+
+        <TextView
+            android:id="@+id/scale"
+            android:layout_width="77dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="37dp"
+            android:gravity="center|start"
+            android:text="@string/weight"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/scale_drawing"
+            app:layout_constraintTop_toBottomOf="@+id/date" />
+
+        <EditText
+            android:id="@+id/medicine1"
+            android:layout_width="163dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="21dp"
+            android:layout_marginStart="21dp"
+            android:layout_marginTop="35dp"
+            android:ems="10"
+            android:hint="@string/weight"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/scale"
+            app:layout_constraintTop_toBottomOf="@+id/date1" />
+        <!--        medicine-->
+        <ImageView
+            android:id="@+id/workout_drawing"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scale_drawing"
+            app:srcCompat="@drawable/workout" />
+
+        <TextView
+            android:id="@+id/workout"
+            android:layout_width="77dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="36dp"
+            android:gravity="center|start"
+            android:text="@string/workout"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/workout_drawing"
+            app:layout_constraintTop_toBottomOf="@+id/scale" />
+
+        <EditText
+            android:id="@+id/workout1"
+            android:layout_width="163dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:hint="@string/total_workout_time"
+            android:inputType="number"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/workout"
+            app:layout_constraintTop_toBottomOf="@+id/medicine1" />
+        <ImageView
+            android:id="@+id/dose_drawing"
+            android:layout_width="38dp"
+            android:layout_height="35dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="41dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/workout_drawing"
+            app:srcCompat="@drawable/dose" />
+
+        <TextView
+            android:id="@+id/dose"
+            android:layout_width="77dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="36dp"
+            android:gravity="center|start"
+            android:text="@string/medicine"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@+id/dose_drawing"
+            app:layout_constraintTop_toBottomOf="@+id/workout1" />
+
+        <EditText
+            android:id="@+id/dose1"
+            android:layout_width="163dp"
+            android:layout_height="41dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="44dp"
+            android:ems="10"
+            android:hint="@string/medicine_taken"
+            android:inputType="text"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toRightOf="@+id/dose"
+            app:layout_constraintTop_toBottomOf="@+id/workout1" />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="75dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="30dp"
+            android:background="#000000"
+            android:text="Send"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dose"
+            android:layout_marginLeft="150dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
