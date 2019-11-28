@@ -2,7 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/grdnt">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/grdnt"
+    android:id="@+id/root">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/bgheaderminimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,7 +34,7 @@
                     android:src="@drawable/usrusr"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/inputEmail"
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Email"
@@ -33,6 +43,7 @@
                     android:background="#00000000"
                     android:letterSpacing="0.1"
                     android:textSize="16dp"
+                    android:fontFamily="@font/ml"
                     android:inputType="text"
                     android:textColor="#000000"
                     />
@@ -52,7 +63,7 @@
                     android:src="@drawable/pswrd"
                     android:layout_gravity="center"/>
                 <EditText
-                    android:id="@+id/inputPassword"
+                    android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
@@ -62,6 +73,7 @@
                     android:inputType="textPassword"
                     android:letterSpacing="0.1"
                     android:textSize="16dp"
+                    android:fontFamily="@font/ml"
                     android:textColor="#000000"/>
             </LinearLayout>
             <LinearLayout
@@ -79,13 +91,14 @@
         android:gravity="bottom"
         android:layout_marginBottom="20dp">
         <Button
-            android:id="@+id/btnLogin"
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
+            android:background="@drawable/bgbtn"
             android:text="Login"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
+            android:fontFamily="@font/mm"
             android:gravity="center"
             android:layout_gravity="bottom"
             android:padding="16dp"
@@ -99,6 +112,7 @@
             android:gravity="center"
             android:text="Create Account ? Signup"
             android:textColor="#000000"
+            android:fontFamily="@font/mm"
             android:letterSpacing="0.1"/>
         <ProgressBar
             android:id="@+id/progressBar"

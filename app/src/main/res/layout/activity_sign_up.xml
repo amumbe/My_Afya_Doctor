@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/grdnt"
-    >
+    android:id="@+id/root">
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/bgheaderminimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -36,7 +44,8 @@
                     android:background="#00000000"
                     android:letterSpacing="0.1"
                     android:textSize="16sp"
-                    android:inputType="text"
+                    android:fontFamily="@font/ml"
+                    android:inputType="textEmailAddress"
                     android:textColor="#000000"
                     />
             </LinearLayout>
@@ -72,6 +81,7 @@
                     android:letterSpacing="0.1"
                     android:textSize="16sp"
                     android:textColor="#000000"
+                    android:fontFamily="@font/ml"
                     />
             </LinearLayout>
 
@@ -91,7 +101,7 @@
                     android:layout_gravity="center"
                     android:contentDescription="@string/todo" />
                 <EditText
-                    android:id="@+id/mobphone"
+                    android:id="@+id/phone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/mobile_number"
@@ -100,8 +110,9 @@
                     android:background="#00000000"
                     android:letterSpacing="0.1"
                     android:textSize="16sp"
-                    android:inputType="number"
+                    android:inputType="phone"
                     android:textColor="#000000"
+                    android:fontFamily="@font/ml"
                     />
             </LinearLayout>
 
@@ -123,23 +134,25 @@
             android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#000000"
+            android:background="@drawable/bgbtn"
             android:text="Register"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
+            android:fontFamily="@font/mm"
             android:gravity="center"
             android:layout_gravity="bottom"
             android:padding="16dp"
             android:layout_marginBottom="50dp"
             android:letterSpacing="0.2"/>
         <Button
-            android:id="@+id/sign_in_button"
+            android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:background="@null"
             android:text="@string/already_have_an_account"
             android:textColor="#000000"
+            android:fontFamily="@font/mm"
             android:letterSpacing="0.1"
             />
     </LinearLayout>
